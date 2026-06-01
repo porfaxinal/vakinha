@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apoio - Vakinha Faxinal PR</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero-top">
+        <span class="hero-category">Projeto Social / Apoio</span>
+        <div class="hero-actions-top">
+          <span class="hero-status">Vakinha ativa✅</span>
+          <span class="hero-region">Faxinal · PR</span>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <div class="nav-links">
+          <a href="index.html">Início</a>
+          <a href="apoio.html" class="active">Apoio</a>
+          <a href="contato.html">Contato</a>
+        </div>
+      </nav>
+
+      <div class="hero-main">
+        <div class="hero-copy">
+          <span class="eyebrow">Doação via PIX</span>
+          <h1>Como apoiar a vaquinha de Faxinal</h1>
+          <p>Você pode doar de forma rápida e segura usando PIX. Preencha seus dados e copie a chave PIX ou use o QR Code para concluir a doação.</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+     <section class="section">
+        <form class="content-card donation-form" id="donation-form" novalidate>
+          <h2>Formulário de doação</h2>
+          <p>Preencha os dados abaixo para validar a sua doação e receber instruções de pagamento.
+            <p></p>
+            OBS: Anexe seu comprovante no último botão verde da página.</p>
+          </p>
+
+          <div class="form-group">
+            <label for="donor-name">Nome completo</label>
+            <input type="text" id="donor-name" name="donorName" required placeholder="Seu nome completo" />
+            <span class="error-message"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="donor-email">E-mail</label>
+            <input type="email" id="donor-email" name="donorEmail" required placeholder="seu@email.com" />
+            <span class="error-message"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="donor-cpf">CPF</label>
+            <input type="text" id="donor-cpf" name="donorCpf" required placeholder="Somente números" maxlength="11" />
+            <span class="error-message"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="donation-amount">Valor da doação</label>
+            <input type="number" id="donation-amount" name="donationAmount" required min="1" placeholder="Ex: 50" />
+            <span class="error-message"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="donor-phone">Telefone</label>
+            <input type="tel" id="donor-phone" name="donorPhone" placeholder="(44) 99999-9999" maxlength="15" />
+            <span class="error-message"></span>
+          </div>
+
+          <button type="submit" class="hero-button hero-button-primary">Validar doação</button>
+          <p class="form-success hidden">Tudo certo! Seus dados foram validados com sucesso.</p>
+          <p class="form-warning">Se algum campo estiver errado, mostramos o erro logo abaixo.</p>
+        </form>
+      </section>
+
+      <section class="section">
+        <div class="content-card">
+          <h2>Pagamento via PIX</h2>
+          <p>Use o QR Code abaixo ou copie a chave para o aplicativo do seu banco.</p>
+          <div class="support-grid">
+
+            <div class="payment-card">
+              <div class="payment-key">
+                <label>Faça o Pix aqui</label>
+                <div class="payment-copy-row">
+                  <code id="pix-key">https://pixgg.com/porfaxinal</code>
+                  <a href="https://pixgg.com/porfaxinal" target="_blank" rel="noopener noreferrer" id="copy-pix-key" class="copy-button" title="Copiar chave PIX">FAZER PIX</a>
+                </div>
+              </div>
+            </div>
+            <a href="contato.html" class="hero-button hero-button-secondary">Enviar comprovante</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <img src="Imagens Sobre/SELO.png" alt="Selo Seguranca">
+      <a href="https://www.instagram.com/porfaxinal/" target="_blank" rel="noopener noreferrer">
+        <img class="social-insta" src="Imagens Sobre/instagram.png" alt="Instagram">
+      </a>
+      <p>Vakinha Faxinal PR © 2026</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

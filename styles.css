@@ -1,0 +1,717 @@
+:root {
+  --bg: #f0fdf4;
+  --surface: #ffffff;
+  --surface-soft: #f7fdf8;
+  --text: #0f1722;
+  --muted: #4b5563;
+  --primary: #0036c0;
+  --primary-dark: #0036c0;
+  --nav: #023ea6;
+  --border: #d1e7dc;
+  --shadow: 0 25px 60px rgba(6, 95, 70, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+button,
+p,
+span {
+  font: inherit;
+}
+
+.page-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* logo removed: site uses no fixed logo */
+
+.hero {
+  background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+  padding: 2.5rem 1.5rem 3rem;
+}
+
+.hero-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  max-width: 1120px;
+  margin: 0 auto 2rem;
+}
+
+.hero-category {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  opacity: 0.85;
+}
+
+.hero-actions-top {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-status,
+.hero-region {
+  background: rgba(255,255,255,0.16);
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0 auto;
+  max-width: 1120px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(2, 62, 166, 0.9);
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.95rem 1.2rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.4);
+}
+
+.hero-main {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  align-items: start;
+  gap: 2rem;
+  max-width: 1120px;
+  margin: 1.5rem auto 0;
+}
+
+.hero-copy {
+  max-width: 580px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.16);
+  color: #eff6ff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 4vw, 4.3rem);
+  line-height: 1.04;
+}
+
+.hero p {
+  margin: 1.5rem 0 0;
+  max-width: 38rem;
+  color: rgba(255,255,255,0.85);
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.hero-button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.95rem 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.hero-button:hover {
+  transform: translateY(-1px);
+}
+
+.hero-button-primary {
+  background: var(--primary);
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.18);
+  border: 1px solid rgba(0,0,0,0.04);
+  display: block;          /* transforma em bloco */
+  margin: 0 auto;          /* centraliza horizontalmente */
+  text-align: center;      /* centraliza o texto dentro do botão */
+  max-width: 300px;
+}
+
+.support-grid a.hero-button-primary {
+  grid-column: 1 / -1;     /* ocupa toda a linha da grid */
+  justify-self: center;    /* centraliza dentro da grid */
+}
+
+
+
+.hero-button-secondary {
+  background: rgba(3, 243, 3, 0.671);
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(3, 243, 3, 0.18);
+}
+
+
+
+.hero-button-secondary {
+  background: #45a049;
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(3, 243, 3, 0.18);
+}
+
+.support-grid a.hero-button-secondary {
+  display: block;
+  margin: 1.5rem auto 0;   /* centraliza horizontalmente */
+  text-align: center;
+  max-width: 300px;
+  grid-column: 1 / -1;     /* ocupa toda a linha da grid */
+  justify-self: center;    /* centraliza dentro da grid */
+}
+
+.hero-button-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.hero-button-primary:focus {
+  outline: 3px solid rgba(16, 185, 129, 0.18);
+  outline-offset: 2px;
+}
+
+.hero-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.hero-panel-card {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 1.5rem;
+  padding: 1.75rem;
+}
+
+.panel-label {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  opacity: 0.85;
+  margin-bottom: 0.75rem;
+}
+
+.panel-value {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.panel-goal {
+  color: rgba(255,255,255,0.78);
+  margin-bottom: 1rem;
+}
+
+.progress-bar {
+  background: rgba(255,255,255,0.18);
+  border-radius: 999px;
+  overflow: hidden;
+  height: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.progress-bar span {
+  display: block;
+  height: 100%;
+  background: #34d399;
+}
+
+.panel-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: rgba(255,255,255,0.9);
+}
+
+.panel-info strong {
+  display: block;
+  font-size: 1.15rem;
+}
+
+.hero-panel-secondary {
+  background: rgba(255,255,255,0.1);
+}
+
+.hero-panel-secondary p {
+  margin: 0.45rem 0 0;
+}
+
+.panel-note {
+  margin-top: 1rem;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.95rem;
+}
+
+.main-content {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2.5rem 0 3rem;
+  flex: 1;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.content-card {
+  margin: 30px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.content-card h2 {
+  margin-top: 0;
+  font-size: 1.75rem;
+}
+
+.content-card p {
+  margin: 1rem 0 0;
+  color: var(--muted);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.info-grid div {
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.info-grid strong {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.image-card {
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+}
+
+.image-card img {
+  width: 100%;
+  display: block;
+  height: 220px;
+  object-fit: cover;
+}
+
+.image-card p {
+  margin: 0;
+  padding: 1rem;
+  color: var(--muted);
+}
+
+.content-card ul {
+  padding-left: 1.25rem;
+  margin: 1rem 0 0;
+}
+
+.content-card li {
+  margin-bottom: 0.75rem;
+}
+
+.support-grid {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.payment-card {
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.payment-card label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.payment-qr {
+  width: 100%;
+  border-radius: 1.25rem;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  height: 260px;
+}
+
+.payment-copy-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.payment-key {
+  margin-bottom: 1rem;
+}
+
+.payment-key code {
+  display: block;
+  background: white;
+  color: #111827;
+  padding: 0.8rem 1rem;
+  border-radius: 0.9rem;
+  font-size: 0.95rem;
+  word-break: break-all;
+}
+
+.copy-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #4CAF50; /* cor de fundo bonita */
+  color: #fff; /* cor do texto */
+  font-weight: bold;
+  text-decoration: none; /* remove o risco embaixo */
+  border-radius: 8px; /* bordas arredondadas */
+  transition: background-color 0.3s ease;
+}
+
+.copy-button:hover {
+  background-color: #45a049; /* cor ao passar o mouse */
+}
+
+.donation-form {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 700;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--surface);
+}
+
+.form-group input.error {
+  border-color: #ef4444;
+}
+
+.error-message {
+  color: #b91c1c;
+  font-size: 0.95rem;
+  min-height: 1.25rem;
+}
+
+.form-success {
+  color: #047857;
+  font-weight: 700;
+}
+
+.form-warning {
+  color: var(--muted);
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1.2rem 1.5rem;
+  background: #111827;
+  color: #d1d5db;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+.social-insta {
+  width: 30px;
+  height: 30px;
+  margin-left: 12px;
+  margin-bottom: 6px;
+}
+
+@media (max-width: 680px) {
+
+  .image-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .image-card {
+    width: 100%;
+  }
+
+  .image-card img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+
+  .image-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+}
+
+
+.index-page .hero-buttons {
+  display: flex;
+  justify-content: center;   /* centraliza os dois juntos */
+  gap: 1rem;
+}
+
+.index-page .hero-button-primary,
+.index-page .hero-button-secondary {
+  display: inline-flex;
+  margin: 0;
+  max-width: none;           /* remove limite de largura */
+}
+
+
+@media (max-width: 680px) {
+
+  .info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .info-grid div {
+    width: 100%;
+    padding: 1rem;
+
+    border: 1px solid #d6e2d6;
+    border-radius: 12px;
+  }
+
+  .info-grid strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  .info-grid p {
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 680px) {
+
+  .hero-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+
+
+  .info-grid div {
+    width: 100%;
+    padding: 1rem;
+
+    border: 1px solid #d6e2d6;
+    border-radius: 12px;
+  }
+
+  .hero-copy {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  .info-grid p {
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 680px) {
+
+  .social-insta {
+    width: 32px;
+    height: 32px;
+    margin-left: 16px;
+    margin-bottom: 5px;
+  }
+
+  .content-card {
+    padding-bottom: 20px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .content-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .content-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .section {
+    padding: 10px;
+  }
+
+  .section form {
+    padding-top: 50px;
+  }
+ 
+  .form-group {
+    margin-top: -30px;
+  }
+
+    .hero-button.hero-button-primary {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 680px) {
+  .support-grid {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center; /* centraliza os cards */
+  }
+
+  .payment-card {
+    
+    max-width: 400px; /* limita largura para não ficar esticado */
+  }
+}
+
+@media (max-width: 680px) {
+
+  
+  .hero-panel {
+    display: flex !important;     /* força flex ao invés de grid */
+    flex-direction: column;       /* empilha os cards */
+    align-items: center;          /* centraliza horizontalmente */
+    gap: 1.5rem;                  /* espaço entre eles */
+    width: 100%;                  /* ocupa toda a largura */
+  }
+
+  .hero-panel-card {
+    width: 100%;                  /* ocupa toda a largura disponível */
+    max-width: 400px;             /* opcional: limita para não ficar esticado */
+    text-align: center;           /* centraliza o conteúdo interno */
+  }
+
+  .hero-button-primary {
+  background:#1c50d4;
+ 
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.18);
+  border: 1px solid rgb(93, 115, 243);
+  width: 100%;
+  }
+  .hero-button-secondary {
+  background: #45a049;
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(3, 243, 3, 0.18);
+  width: 100%;
+}
+}
