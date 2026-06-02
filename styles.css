@@ -78,7 +78,8 @@ span {
 .main-nav {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: nowrap;
   gap: 0.75rem;
   margin: 0 auto;
   max-width: 1120px;
@@ -88,14 +89,33 @@ span {
   background: rgba(2, 62, 166, 0.9);
   padding: 0.75rem 1rem;
   border-radius: 999px;
+  position: relative;
 }
 
+/* Brand/logo inside nav, fixed at left of the nav */
+.nav-brand {
+  display: inline-flex;
+  align-items: center;
+  position: absolute;
+  left: 1rem;
+  text-decoration: none;
+}
+.nav-brand img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Ensure nav-links remain centered while brand stays on the left */
 .nav-links {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex: 1;
   gap: 0.75rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .main-nav a {
@@ -530,6 +550,15 @@ html {
   margin-bottom: 6px;
 }
 
+/* Ícone do site (logo pequeno) */
+.site-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
  .botaocomprovante {
     background: transparent;
     border: 2px solid #4CAF50;
@@ -542,6 +571,33 @@ html {
 
 @media (max-width: 680px) {
 
+  .site-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: -20px;
+}
+
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-brand {
+    margin-right: 0;
+  }
+
+  .nav-links {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .site-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+  }
 
   .botaocomprovante {
     background: transparent;
