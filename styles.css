@@ -54,11 +54,20 @@ span {
   margin: 0 auto 2rem;
 }
 
+.hero-category2 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  opacity: 0.85;
+  margin-left: -550px;
+}
+
 .hero-category {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   opacity: 0.85;
+  margin-left: -470px;
 }
 
 .hero-actions-top {
@@ -556,7 +565,7 @@ html {
   height: 48px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 12px;
+  margin: 0;
 }
 
  .botaocomprovante {
@@ -576,8 +585,9 @@ html {
   height: 48px;
   border-radius: 50%;
   object-fit: cover;
-  margin-left: -20px;
+  margin-left: 20px;
 }
+
 
   .main-nav {
     flex-wrap: wrap;
@@ -773,6 +783,10 @@ html {
 
 @media (max-width: 680px) {
 
+
+  .hero-category {
+    visibility: hidden;
+  }
   
   .hero-panel {
     display: flex !important;     /* força flex ao invés de grid */
