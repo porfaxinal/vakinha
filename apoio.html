@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Apoio - Vakinha Faxinal PR</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    @media (max-width: 680px) {
+      .form-warning {
+        margin-top: -15px;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="page-shell">
@@ -30,6 +37,7 @@
           <span class="eyebrow">Doação via PIX</span>
           <h1>Como apoiar a vaquinha de Faxinal</h1>
           <p>Você pode doar de forma rápida e segura usando PIX. Preencha seus dados e copie a chave PIX para concluir a doação.</p>
+          <strong style="display:block; padding-top:40px;">OBS: Mesmo se a meta for alcançada, sua doação extra continuará sendo muito bem-vinda.</strong>
         </div>
       </div>
     </header>
@@ -37,14 +45,12 @@
     <main class="main-content">
      <section class="section">
         <form class="content-card donation-form" id="donation-form" novalidate>
-          <h2>Formulário de doação</h2>
-          <p>Preencha os dados abaixo para validar a sua doação e receber instruções de pagamento.
-            <p></p>
+          <h2 style="margin-bottom: -20px; margin-top: -20px;">Formulário de doação<text style="font-size: 0.9rem; font-weight: normal;">(opcional)</text></h2>
+          <p style="margin-bottom: 50px;">Preencha os dados abaixo para validar a sua doação e receber instruções de pagamento.<br>
             OBS: Anexe seu comprovante no último botão verde da página.</p>
-          </p>
 
           <div class="form-group">
-            <label for="donor-name">Nome completo</label>
+            <label for="donor-name">Nome</label>
             <input type="text" id="donor-name" name="donorName" required placeholder="Seu nome completo" />
             <span class="error-message"></span>
           </div>
@@ -62,12 +68,6 @@
           </div>
 
           <div class="form-group">
-            <label for="donation-amount">Valor da doação</label>
-            <input type="number" id="donation-amount" name="donationAmount" required min="1" placeholder="Ex: 50" />
-            <span class="error-message"></span>
-          </div>
-
-          <div class="form-group">
             <label for="donor-phone">Telefone</label>
             <input type="tel" id="donor-phone" name="donorPhone" placeholder="(44) 99999-9999" maxlength="15" />
             <span class="error-message"></span>
@@ -81,20 +81,20 @@
 
       <section class="section">
         <div class="content-card">
-          <h2>Pagamento via PIX</h2>
-          <p>Use o QR Code abaixo ou copie a chave para o aplicativo do seu banco.</p>
+          <h2 class="content-card-title">Contribua via PIX</h2>
+          
           <div class="support-grid">
 
             <div class="payment-card">
               <div class="payment-key">
-                <label>Faça o Pix aqui</label>
+                <label>🔒 Ambiente seguro para pagamento</label>
                 <div class="payment-copy-row">
-                  <code id="pix-key">https://pixgg.com/porfaxinal</code>
-                  <a href="https://pixgg.com/porfaxinal" target="_blank" rel="noopener noreferrer" id="copy-pix-key" class="copy-button" title="Copiar chave PIX">FAZER PIX</a>
+                 
+                  <a style="margin-top: 20px;" href="https://pixgg.com/porfaxinal" target="_blank" rel="noopener noreferrer" id="copy-pix-key" class="copy-button" title="Copiar chave PIX">Doar agora</a>
                 </div>
               </div>
             </div>
-            <a href="contato.html" class="hero-button hero-button-secondary">Enviar comprovante</a>
+            <a class="botaocomprovante" href="contato.html">Enviar comprovante</a>
           </div>
         </div>
       </section>

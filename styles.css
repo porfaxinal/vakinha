@@ -513,6 +513,11 @@ span {
   color: #d1d5db;
 }
 
+.hero-main strong {
+  color: #5bf004;
+  font-size: 1.2rem;
+}
+
 html {
   font-size: 16px;
   scroll-behavior: smooth;
@@ -525,7 +530,31 @@ html {
   margin-bottom: 6px;
 }
 
+ .botaocomprovante {
+    background: transparent;
+    border: 2px solid #4CAF50;
+    color: #4CAF50;
+    border-radius: 15px;
+    padding: 5px 5px;
+    text-decoration: none;
+  }
+
+
 @media (max-width: 680px) {
+
+
+  .botaocomprovante {
+    background: transparent;
+    border: 2px solid #4CAF50;
+    color: #4CAF50;
+    border-radius: 15px;
+    padding: 5px 5px;
+    text-decoration: none;
+  }
+
+  .content-card-title {
+    margin-bottom: -10px;
+  }
 
   .image-grid {
     display: flex;
@@ -679,6 +708,11 @@ html {
     
     max-width: 400px; /* limita largura para não ficar esticado */
   }
+
+  .hero {
+    margin-bottom: -30px;
+  }
+
 }
 
 @media (max-width: 680px) {
