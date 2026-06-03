@@ -565,7 +565,7 @@ html {
   height: 48px;
   border-radius: 50%;
   object-fit: cover;
-  margin: 0;
+ 
 }
 
  .botaocomprovante {
@@ -581,11 +581,10 @@ html {
 @media (max-width: 680px) {
 
   .site-icon {
-  width: 48px;
-  height: 48px;
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
-  object-fit: cover;
-  margin-left: 20px;
+  margin-left: 0px;
 }
 
 
